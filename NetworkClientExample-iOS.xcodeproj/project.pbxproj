@@ -16,7 +16,7 @@
 		8E2F7FE52C752A39001E163A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F7FE42C752A39001E163A /* Endpoint.swift */; };
 		8E2F7FE72C752A55001E163A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F7FE62C752A55001E163A /* NetworkError.swift */; };
 		8E2F7FE92C752AAC001E163A /* ExampleEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F7FE82C752AAC001E163A /* ExampleEndpoint.swift */; };
-		8E2F7FED2C752B03001E163A /* ExampleError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F7FEC2C752B03001E163A /* ExampleError.swift */; };
+		8E2F7FED2C752B03001E163A /* ExampleServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F7FEC2C752B03001E163A /* ExampleServiceError.swift */; };
 		8E2F7FEF2C752B11001E163A /* ServiceErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F7FEE2C752B11001E163A /* ServiceErrorProtocol.swift */; };
 		8E2F7FF12C752B68001E163A /* ExampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F7FF02C752B68001E163A /* ExampleService.swift */; };
 		8E2F7FF32C752B7E001E163A /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2F7FF22C752B7E001E163A /* Comment.swift */; };
@@ -51,7 +51,7 @@
 		8E2F7FE42C752A39001E163A /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		8E2F7FE62C752A55001E163A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		8E2F7FE82C752AAC001E163A /* ExampleEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleEndpoint.swift; sourceTree = "<group>"; };
-		8E2F7FEC2C752B03001E163A /* ExampleError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleError.swift; sourceTree = "<group>"; };
+		8E2F7FEC2C752B03001E163A /* ExampleServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleServiceError.swift; sourceTree = "<group>"; };
 		8E2F7FEE2C752B11001E163A /* ServiceErrorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceErrorProtocol.swift; sourceTree = "<group>"; };
 		8E2F7FF02C752B68001E163A /* ExampleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleService.swift; sourceTree = "<group>"; };
 		8E2F7FF22C752B7E001E163A /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				8E2F7FE82C752AAC001E163A /* ExampleEndpoint.swift */,
-				8E2F7FEC2C752B03001E163A /* ExampleError.swift */,
+				8E2F7FEC2C752B03001E163A /* ExampleServiceError.swift */,
 				8E2F7FF02C752B68001E163A /* ExampleService.swift */,
 			);
 			path = Example;
@@ -286,7 +286,7 @@
 				8E2F7FB22C7528C0001E163A /* ViewController.swift in Sources */,
 				8E2F7FAE2C7528C0001E163A /* AppDelegate.swift in Sources */,
 				8E2F7FE92C752AAC001E163A /* ExampleEndpoint.swift in Sources */,
-				8E2F7FED2C752B03001E163A /* ExampleError.swift in Sources */,
+				8E2F7FED2C752B03001E163A /* ExampleServiceError.swift in Sources */,
 				8E2F7FF12C752B68001E163A /* ExampleService.swift in Sources */,
 				8E2F7FB02C7528C0001E163A /* SceneDelegate.swift in Sources */,
 				8E2F7FE72C752A55001E163A /* NetworkError.swift in Sources */,

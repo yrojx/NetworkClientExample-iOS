@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ExampleServiceProtocol {
-    func getComments(with postId: String) async -> Result<[Comment], ExampleError>
+    func getComments(with postId: String) async -> Result<[Comment], ExampleServiceError>
 }
 
 final class ExampleService: ExampleServiceProtocol {
@@ -18,7 +18,7 @@ final class ExampleService: ExampleServiceProtocol {
         self.networkClient = networkClient
     }
     
-    func getComments(with postId: String) async -> Result<[Comment], ExampleError> {
+    func getComments(with postId: String) async -> Result<[Comment], ExampleServiceError> {
         do {
             let response: [Comment] = try await networkClient.request(target: ExampleEndpoint.getCommentsWith(postId: postId))
             

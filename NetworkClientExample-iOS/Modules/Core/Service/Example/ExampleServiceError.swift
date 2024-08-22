@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ExampleError: ServiceErrorProtocol {
+enum ExampleServiceError: ServiceErrorProtocol {
     case network
     case empty
     
