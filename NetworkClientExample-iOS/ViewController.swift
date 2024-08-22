@@ -7,6 +7,8 @@
 
 import UIKit
 
+// Can be moved to Modules folder
+// Just to make easy to find the file
 final class ViewController: UIViewController {
     
     private var viewModel: ViewModelProtocol
@@ -31,8 +33,21 @@ final class ViewController: UIViewController {
 }
 
 extension ViewController: ViewModelAction {
-    func updateView() {
-        print(viewModel.comments)
+    func updateView(uiState: ExampleUIState) {
+        print(uiState) // just to show if it works
+        switch uiState {
+        case .loading:
+            // show loading
+            break
+        case .success:
+            // show content
+            break
+        case .error(let exampleServiceError):
+            // show error
+            // can create generic ErrorView that showing info in the ServiceErrorProtocol
+            // self.errorView.updateView(with: exampleServiceError)
+            break
+        }
     }
 }
 

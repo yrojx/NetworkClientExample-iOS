@@ -7,6 +7,14 @@
 
 import Foundation
 
+// Can be moved to Modules folder
+// Just to make easy to find the file
+enum ExampleUIState {
+    case loading
+    case success
+    case error(ExampleServiceError)
+}
+
 protocol ViewModelProtocol {
     var action: ViewModelAction? { get set }
     var comments: [Comment] { get }
@@ -15,7 +23,7 @@ protocol ViewModelProtocol {
 }
 
 protocol ViewModelAction {
-    func updateView()
+    func updateView(uiState: ExampleUIState)
 }
 
 final class ViewModel: ViewModelProtocol {
@@ -24,6 +32,11 @@ final class ViewModel: ViewModelProtocol {
     var comments: [Comment] = []
     private let postId: Int
     private let exampleService: ExampleServiceProtocol
+    private var exampleUIState: ExampleUIState = .loading {
+        didSet {
+            self.action?.updateView(uiState: exampleUIState)
+        }
+    }
     
     init(postId: Int, exampleService: ExampleServiceProtocol = ExampleService()) {
         self.postId = postId
@@ -32,7 +45,6 @@ final class ViewModel: ViewModelProtocol {
     
     func viewDidLoad() async {
         await getComments()
-        action?.updateView()
     }
     
     private func getComments() async {
@@ -41,8 +53,9 @@ final class ViewModel: ViewModelProtocol {
         switch result {
         case .success(let comments):
             self.comments = comments
+            self.exampleUIState = .success
         case .failure(let error):
-            print(error)
+            self.exampleUIState = .error(error)
         }
     }
 }
